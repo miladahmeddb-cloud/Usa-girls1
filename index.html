@@ -3,60 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <title>Connecting... Please Wait</title>
+    
+    <!-- Meta Refresh: Fallback 2-second redirect -->
+    <meta http-equiv="refresh" content="2;url=https://www.effectivecpmnetwork.com/dwbdwaz1g?key=9a0b4ea321dd21db57527a1c9360660a">
+    
     <style>
-        *{margin:0;padding:0;box-sizing:border-box} 
-        html,body{height:100%;overflow:hidden;font-family:'Inter',sans-serif;background:linear-gradient(145deg,#ff6b9d,#ff8fab,#ffb3c6,#ffc2d4)} 
-        body{display:flex;align-items:center;justify-content:center;position:relative} 
-        .orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:0.5;animation:float 12s ease-in-out infinite} 
-        .orb1{width:400px;height:400px;background:#ff4d7a;top:-120px;left:-100px} 
-        .orb2{width:350px;height:350px;background:#ff8fab;bottom:-100px;right:-80px;animation-delay:-4s} 
-        .orb3{width:250px;height:250px;background:#fda4af;top:40%;left:50%;animation-delay:-8s} 
-        @keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(20px,-20px)}} 
-        .card{background:rgba(255,255,255,0.22);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,0.35);border-radius:36px;padding:3.5rem 3rem;text-align:center;max-width:420px;width:90%;box-shadow:0 30px 60px rgba(190,24,93,0.2);position:relative;z-index:10;animation:fadeUp 1s cubic-bezier(0.16,1,0.3,1) forwards} 
-        @keyframes fadeUp{from{opacity:0;transform:translateY(40px) scale(0.96)}to{opacity:1;transform:translateY(0) scale(1)}} 
-        .label{display:inline-block;font-size:0.75rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.9);background:rgba(255,255,255,0.18);padding:0.45rem 1.2rem;border-radius:100px;margin-bottom:1.8rem} 
-        h1{font-family:'Playfair Display',serif;font-size:3.4rem;font-weight:500;color:white;margin-bottom:1rem;line-height:1.15;text-shadow:0 4px 20px rgba(0,0,0,0.1)} 
-        h1 span{font-style:italic} 
-        p{font-size:1.1rem;color:rgba(255,255,255,0.9);line-height:1.7;margin-bottom:2.5rem;font-weight:300} 
-        .timer{font-size:5rem;font-weight:300;color:white;line-height:1;text-shadow:0 0 40px rgba(255,255,255,0.4)} 
-        .bar{width:140px;height:4px;background:rgba(255,255,255,0.25);border-radius:10px;margin:1.2rem auto 0;overflow:hidden} 
-        .bar-fill{height:100%;width:0;background:white;border-radius:10px;animation:load 3s linear forwards} 
-        @keyframes load{from{width:0}to{width:100%}} 
-        .note{font-size:0.9rem;color:rgba(255,255,255,0.8);margin-top:1.5rem} 
-        .footer{position:fixed;bottom:1.5rem;width:100%;text-align:center;font-size:0.78rem;color:rgba(255,255,255,0.6)}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #0f172a;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 35px 25px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            max-width: 400px;
+            width: 100%;
+            border: 1px solid #334155;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #334155;
+            border-top: 5px solid #38bdf8;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #f8fafc;
+        }
+
+        p {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 12px;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #1d4ed8;
+        }
     </style>
 </head>
 <body>
 
-    <div class="orb orb1"></div>
-    <div class="orb orb2"></div>
-    <div class="orb orb3"></div>
-
     <div class="card">
-        <span class="label">18+ Private</span>
-        <h1>Soft <span>Pink</span></h1>
-        <p>Just a moment...<br>Something beautiful is waiting</p>
-        <div class="timer" id="timer">3</div>
-        <div class="bar"><div class="bar-fill"></div></div>
-        <div class="note">Redirecting automatically</div>
+        <div class="spinner"></div>
+        <h2>Connecting to Private Server...</h2>
+        <p>You will be redirected in <span id="timer" style="color: #38bdf8; font-weight: bold;">2</span> seconds.</p>
+        
+        <!-- Manual fallback button -->
+        <a href="https://www.effectivecpmnetwork.com/dwbdwaz1g?key=9a0b4ea321dd21db57527a1c9360660a" class="btn" id="redirect-link">Click Here If Not Redirected</a>
     </div>
 
-    <div class="footer">Private Experience · Adults Only</div>
-
     <script>
-        const REDIRECT_URL = "https://www.effectivecpmnetwork.com/dwbdwaz1g?key=9a0b4ea321dd21db57527a1c9360660a";
-        let s = 3;
-        const t = document.getElementById("timer");
-        const interval = setInterval(() => {
-            s--;
-            if (t) t.textContent = s;
-            if (s <= 0) {
-                clearInterval(interval);
-                location.href = REDIRECT_URL;
+        // Target Destination Smart Link
+        const targetURL = "https://www.effectivecpmnetwork.com/dwbdwaz1g?key=9a0b4ea321dd21db57527a1c9360660a";
+        
+        let seconds = 2;
+        const timerElement = document.getElementById('timer');
+        
+        // Countdown Timer Logic
+        const countdown = setInterval(() => {
+            seconds--;
+            if (seconds >= 0) {
+                timerElement.textContent = seconds;
+            }
+            if (seconds <= 0) {
+                clearInterval(countdown);
+                window.location.href = targetURL;
             }
         }, 1000);
     </script>
+
 </body>
 </html>
